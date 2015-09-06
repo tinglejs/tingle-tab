@@ -1,0 +1,36 @@
+{
+  "name": "tingle-tab",
+  "version": "0.0.1",
+  "description": "tingle-tab component for tingle.",
+  "repository": "https://github.com/tinglejs/tingle-tab.git",
+  "author": "zhangshun",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "tingle-tab,Tab",
+    ""
+  ],
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "fastclick": "^1.0.6",
+    "react": "^0.13.3",
+    "tingle-context": "latest",
+    "tingle-scroller": "0.0.4",
+    "tingle-style": "latest",
+    "zepto": "0.0.4"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.19",
+    "babel-loader": "^5.3.2",
+    "gulp": "^3.9.0",
+    "tingle-dev-tools": "latest"
+  },
+  "scripts": {
+    "start": "gulp server"
+  },
+  "license": "MIT",
+  "screenshots": ""
+}

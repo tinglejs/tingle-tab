@@ -1,0 +1,48 @@
+/**
+ * Tab Component Style for tingle
+ * @author zhangshun
+ *
+ * Copyright 2014-2015, Tingle Team, Alinw.
+ * All rights reserved.
+ */
+.tTab {
+  overflow: hidden;
+}
+.tTabHead {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  height: 1.306666666666667rem;
+}
+.tTabHead >div {
+  height: 100%;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+.tTabHeadScroll {
+  white-space: nowrap;
+}
+.tTabHeadContainer {
+  height: 100%;
+}
+.tTabHeadItem {
+  padding: 0 0.333333333333333rem;
+  height: 1.306666666666667rem;
+  line-height: 1.306666666666667rem;
+  overflow: hidden;
+  cursor: pointer;
+  color: #757575;
+  white-space: nowrap;
+  font-size: 0.426666666666667rem;
+}
+.tTabHeadItem.active {
+  color: #424242;
+  height: 100%;
+  border-bottom: 0.066666666666667rem solid #fb8c00;
+}
+.hairline .tTabHead >div {
+  border-top-width: 0.013333333333333rem;
+  border-bottom-width: 0.013333333333333rem;
+}
+
+/*# sourceMappingURL=Tab.css.map */

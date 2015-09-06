@@ -1,0 +1,26 @@
+{
+  "name": "tingle-tab",
+  "version": "0.0.0",
+  "description": "tingle-tab component for tingle.",
+  "author": "zhangshun",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "tingle-tab",
+    "Tab",
+    ""
+  ],
+  "license": "MIT",
+  "screenshots": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "dist",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
