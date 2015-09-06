@@ -6,13 +6,9 @@
  * All rights reserved.
  */
 
-require("tingle-context");
-var attachFastClick = require('fastclick');
-var Tab = require('../src');
-// TODO: move the line to tingle-env
-React.initializeTouchEvents(true);
-// surport mobile click
-attachFastClick.attach(document.body);
+const classnames = require('classnames');
+
+const Tab = require('../src');
 
 class Demo extends React.Component {
 
@@ -35,7 +31,7 @@ class Demo extends React.Component {
         var t = this;
         return (
             <div>
-                <Tab index={2} onChange={t.handleChange.bind(t)}>
+                <Tab scroll={true} index={2} onChange={t.handleChange.bind(t)}>
                     <Tab.item title="头条" data={{"customKey1":"自定义值1","customKey2":"自定义值2"}}>
                     <div className="tLH1_5 tP10">
                          与 Angular，Ember，Backbone 等等比起来 React 的表现如何？要如何处理数据？要如何连接服务器？JSX 到底是什么？“组件”又是如何定义的？
@@ -72,7 +68,7 @@ class Demo extends React.Component {
                 </Tab>
 
 
-                 <Tab index={2} scroll={true} onChange={t.handleChange.bind(t)}>
+                 <Tab index={2}  onChange={t.handleChange.bind(t)}>
                     <Tab.item title="全部" data={{"customKey1":"自定义值1","customKey2":"自定义值2"}}>
                     <div className="tLH1_5 tP10">
                          与 Angular，Ember，Backbone 等等比起来 React 的表现如何？要如何处理数据？要如何连接服务器？JSX 到底是什么？“组件”又是如何定义的？

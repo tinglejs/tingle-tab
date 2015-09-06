@@ -1,15 +1,5 @@
 # Tab 多标签
 
-- name: tingle-tab
-- category: tingle
-- title: Tab 多标签
-- tags: Tab,切换,标签
-- description: 切换标签
-- maintainers: 张顺
-- version: 1.0.0
-- lastupdate: 2015-09-06
-- screenshots: https://gtms04.alicdn.com/tps/i4/TB1F8FTIVXXXXbMaFXX7bu.3pXX-433-175.png
-
 ---
 
 ## TL;DR
