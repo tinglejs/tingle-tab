@@ -1,7 +1,7 @@
 {
   "name": "tingle-tab",
   "version": "0.0.1",
-  "description": "tingle-tab component for tingle.",
+  "description": "tingle-tab tab选项",
   "repository": "https://github.com/tinglejs/tingle-tab.git",
   "author": "zhangshun",
   "main": "src/index.js",
@@ -10,8 +10,10 @@
     "README.md"
   ],
   "keywords": [
-    "tingle-tab,Tab",
-    ""
+    "tingle-tab",
+    "tab",
+    "选项",
+    "tingle"
   ],
   "dependencies": {
     "classnames": "^2.1.2",

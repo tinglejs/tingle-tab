@@ -99,7 +99,7 @@ class Demo extends React.Component {
 
     _renderListView(title) {
         var t = this;
-        var listData = ["aaa","bbb","ccc","ddd","eee","Flexbox 设计指南2：垂直布局","关注前端前沿技术，探寻业界深邃思想","同构 JavaScript 应用 —— Web 世界的未来？"];
+        var listData = ["javascript","html","tingle","seajs","webpack","Flexbox 设计指南2：垂直布局","关注前端前沿技术，探寻业界深邃思想","同构 JavaScript 应用 —— Web 世界的未来？"];
         return <ul>{
             listData.map(function(item,index){
                 return <li key={index}>{title+"==="+item}</li>

@@ -53,7 +53,7 @@
 |---|----|---|----|
 |index|Interger|0|默认选项，第一个|
 |onChange|Function| function() {} | 单击选项变更时触发 |
-|scroll|Boolean|true|tab子项目很多时，横向是否显示滚动条|
+|scroll|Boolean|true|tab子项目很多时，横向是否显示滚动条，默认false,等分item|
 
 ### 子项目item
 
@@ -65,7 +65,7 @@
 
 ## 事件
 
-- onChange(obj) 
+### onChange(obj) 
 
 ```javascript
 // 新值和事件对象
