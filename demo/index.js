@@ -8,5 +8,5 @@
 window.FastClick && FastClick.attach(document.body);
 require("tingle-context");
 
-var Demo = require('./TabDemo');
+const Demo = require('./TabDemo');
 React.render(<Demo/>, document.getElementById('TingleDemo'));
