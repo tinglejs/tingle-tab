@@ -21,10 +21,8 @@ lineColor = #e6e6e6
     overflow: hidden
     background-color: default_bgcolor;
     height: rem(98)
-    >div
-        height 100%
-        border-top: 1px solid lineColor;
-        border-bottom: 1px solid lineColor;
+    border-top: 1px solid lineColor;
+    border-bottom: 1px solid lineColor;
 .tTabHeadScroll
     //足够大，内部可防止更多item
     white-space: nowrap;
@@ -41,10 +39,8 @@ lineColor = #e6e6e6
     font-size: rem(32)
     &.active
         color: #424242;
-        height: 100%;
-        border-bottom: rem(5) solid default_active_color
+        border-bottom: rem(6) solid default_active_color
 .hairline
     .tTabHead 
-        >div
-            border-top-width: rem(1)
-            border-bottom-width: rem(1)
+        border-top-width: .5px
+        border-bottom-width: .5px

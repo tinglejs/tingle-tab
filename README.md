@@ -81,5 +81,4 @@ handleChange(obj) {
 
 ## Links 相关链接
 
-- [Fire a bug/Issues 提 Bug](http://github.com/tinglejs/tingle-tab/issues)
-- [tingle](http://github.com/tinglejs/tingle)
+- [Fire a bug/Issues 提 Bug](https://github.com/tinglejs/tingle-tab/issues)

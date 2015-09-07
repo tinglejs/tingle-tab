@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "tingle-tab tab选项",
   "repository": "https://github.com/tinglejs/tingle-tab.git",
-  "author": "zhangshun",
+  "author": {
+    "name":"zhangshun",
+    "email":"kangning1206@163.com"
+  },
   "main": "src/index.js",
   "files": [
     "src",
@@ -19,10 +22,9 @@
     "classnames": "^2.1.2",
     "fastclick": "^1.0.6",
     "react": "^0.13.3",
-    "tingle-context": "latest",
-    "tingle-scroller": "0.0.4",
-    "tingle-style": "latest",
-    "zepto": "0.0.4"
+    "tingle-scroller": "~0.0.4",
+    "tingle-context": "~0.1.0",
+    "tingle-style": "~0.0.1"
   },
   "devDependencies": {
     "babel-core": "^5.8.19",

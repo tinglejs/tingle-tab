@@ -80,14 +80,10 @@ class Demo extends React.Component {
                     </div>
                     </Tab.item>
                     <Tab.item title="未完成">
-                     <div className="tLH1_5 tP10">
-                         今日新闻网传播新闻事实,关注最近热点新闻事件,最新新闻报道国内、国际、财经、房产、娱乐、体育、消费、数码科技等新闻消息,今日关注探寻热点新闻事件真相,对今日关注...
-                    </div>
+                     
                     </Tab.item>
                     <Tab.item title="通过">
-                    <div className="demoListView tM10">
-                        {t._renderListView("杭州")}
-                    </div>
+                   
                     </Tab.item>
                    
 
