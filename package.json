@@ -4,8 +4,8 @@
   "description": "tingle-tab tab选项",
   "repository": "https://github.com/tinglejs/tingle-tab.git",
   "author": {
-    "name":"zhangshun",
-    "email":"kangning1206@163.com"
+    "name": "zhangshun",
+    "email": "kangning1206@163.com"
   },
   "main": "src/index.js",
   "files": [
@@ -20,17 +20,17 @@
   ],
   "dependencies": {
     "classnames": "^2.1.2",
-    "fastclick": "^1.0.6",
-    "react": "^0.13.3",
-    "tingle-scroller": "~0.0.4",
     "tingle-context": "~0.1.0",
-    "tingle-style": "~0.0.1"
+    "tingle-style": "~0.0.1",
+    "tingle-scroller": "~0.0.4"
   },
   "devDependencies": {
     "babel-core": "^5.8.19",
     "babel-loader": "^5.3.2",
     "gulp": "^3.9.0",
-    "tingle-dev-tools": "latest"
+    "tingle-dev-tools": "latest",
+    "fastclick": "^1.0.6",
+    "react": "^0.13.3"
   },
   "scripts": {
     "start": "gulp server"

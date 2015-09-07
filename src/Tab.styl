@@ -15,32 +15,37 @@ default_active_color = #fb8c00
 lineColor = #e6e6e6
 
 .tTab
-    overflow hidden
-.tTabHead 
-    width 100%
-    overflow hidden
-    background-color default_bgcolor
-    height rem(98)
-    border-top 1px solid lineColor
-    border-bottom 1px solid lineColor
+  overflow hidden
+
+.tTabHead
+  width 100%
+  overflow hidden
+  background-color default_bgcolor
+  height rem(98)
+  border-top 1px solid lineColor
+  border-bottom 1px solid lineColor
+
 .tTabHeadScroll
-    //足够大，内部可防止更多item
-    white-space nowrap
+  //足够大，内部可防止更多item
+  white-space nowrap
+
 .tTabHeadContainer
-    height 100%
-.tTabHeadItem 
-    padding 0 rem(25)
-    height rem(98)
-    line-height rem(98)
-    overflow hidden
-    cursor pointer
-    color default_color
-    white-space nowrap
-    font-size rem(32)
-    &.active
-        color #424242
-        border-bottom rem(5) solid default_active_color
+  height 100%
+
+.tTabHeadItem
+  padding 0 rem(25)
+  height rem(98)
+  line-height rem(98)
+  overflow hidden
+  cursor pointer
+  color default_color
+  white-space nowrap
+  font-size rem(32)
+  &.active
+    color #424242
+    border-bottom rem(5) solid default_active_color
+
 .hairline
-    .tTabHead 
-        border-top-width .5px
-        border-bottom-width .5px
+  .tTabHead
+    border-top-width .5px
+    border-bottom-width .5px
