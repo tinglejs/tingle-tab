@@ -6,13 +6,9 @@
  * All rights reserved.
  */
 
-require("tingle-context");
-var attachFastClick = require('fastclick');
-var Tab = require('../src');
-// TODO: move the line to tingle-env
-React.initializeTouchEvents(true);
-// surport mobile click
-attachFastClick.attach(document.body);
+const classnames = require('classnames');
+
+const Tab = require('../src');
 
 class Demo extends React.Component {
 
@@ -35,7 +31,7 @@ class Demo extends React.Component {
         var t = this;
         return (
             <div>
-                <Tab index={2} onChange={t.handleChange.bind(t)}>
+                <Tab scroll={true} index={2} onChange={t.handleChange.bind(t)}>
                     <Tab.item title="头条" data={{"customKey1":"自定义值1","customKey2":"自定义值2"}}>
                     <div className="tLH1_5 tP10">
                          与 Angular，Ember，Backbone 等等比起来 React 的表现如何？要如何处理数据？要如何连接服务器？JSX 到底是什么？“组件”又是如何定义的？
@@ -72,7 +68,7 @@ class Demo extends React.Component {
                 </Tab>
 
 
-                 <Tab index={2} scroll={true} onChange={t.handleChange.bind(t)}>
+                 <Tab index={2}  onChange={t.handleChange.bind(t)}>
                     <Tab.item title="全部" data={{"customKey1":"自定义值1","customKey2":"自定义值2"}}>
                     <div className="tLH1_5 tP10">
                          与 Angular，Ember，Backbone 等等比起来 React 的表现如何？要如何处理数据？要如何连接服务器？JSX 到底是什么？“组件”又是如何定义的？
@@ -84,14 +80,10 @@ class Demo extends React.Component {
                     </div>
                     </Tab.item>
                     <Tab.item title="未完成">
-                     <div className="tLH1_5 tP10">
-                         今日新闻网传播新闻事实,关注最近热点新闻事件,最新新闻报道国内、国际、财经、房产、娱乐、体育、消费、数码科技等新闻消息,今日关注探寻热点新闻事件真相,对今日关注...
-                    </div>
+                     
                     </Tab.item>
                     <Tab.item title="通过">
-                    <div className="demoListView tM10">
-                        {t._renderListView("杭州")}
-                    </div>
+                   
                     </Tab.item>
                    
 
@@ -103,7 +95,7 @@ class Demo extends React.Component {
 
     _renderListView(title) {
         var t = this;
-        var listData = ["aaa","bbb","ccc","ddd","eee","Flexbox 设计指南2：垂直布局","关注前端前沿技术，探寻业界深邃思想","同构 JavaScript 应用 —— Web 世界的未来？"];
+        var listData = ["javascript","html","tingle","seajs","webpack","Flexbox 设计指南2：垂直布局","关注前端前沿技术，探寻业界深邃思想","同构 JavaScript 应用 —— Web 世界的未来？"];
         return <ul>{
             listData.map(function(item,index){
                 return <li key={index}>{title+"==="+item}</li>

@@ -13,9 +13,6 @@
   overflow: hidden;
   background-color: #fff;
   height: 1.306666666666667rem;
-}
-.tTabHead >div {
-  height: 100%;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -37,12 +34,11 @@
 }
 .tTabHeadItem.active {
   color: #424242;
-  height: 100%;
   border-bottom: 0.066666666666667rem solid #fb8c00;
 }
-.hairline .tTabHead >div {
-  border-top-width: 0.013333333333333rem;
-  border-bottom-width: 0.013333333333333rem;
+.hairline .tTabHead {
+  border-top-width: 0.5px;
+  border-bottom-width: 0.5px;
 }
 
 /*# sourceMappingURL=Tab.css.map */

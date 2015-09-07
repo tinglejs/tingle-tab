@@ -5,9 +5,12 @@
  * Copyright 2014-2015, Tingle Team, Alinw.
  * All rights reserved.
  */
-var TabItem = require('./TabItem');
-var classnames = require('classnames');
-var Scroller = require('tingle-scroller');
+const Context = require('tingle-context');
+const classnames = require('classnames');
+const Scroller = require('tingle-scroller');
+
+const TabItem = require('./TabItem');
+
 class Tab extends React.Component {
 
     /**
@@ -27,14 +30,14 @@ class Tab extends React.Component {
      */
     componentDidMount() {
         // 计算宽度和滚动
-        var t = this;
+        let t = this;
         if (!t.props.scroll) {
             return;
         }
-        var w = 0;
-        var scrollEl = React.findDOMNode(t.refs.scroll);
-        var chNodes = scrollEl.childNodes;
-        for (var i = 0, l = chNodes.length; i < l; i++) {
+        let w = 0;
+        let scrollEl = React.findDOMNode(t.refs.scroll);
+        let chNodes = scrollEl.childNodes;
+        for (let i = 0, l = chNodes.length; i < l; i++) {
             w += chNodes[i].offsetWidth + 1;
         }
 
@@ -51,8 +54,8 @@ class Tab extends React.Component {
      * @return {[type]}       [description]
      */
     handleChange(index, data, e) {
-        var t = this;
-        var preIndex = t.state.index;
+        let t = this;
+        let preIndex = t.state.index;
         t.setState({
             index: index
         });
@@ -69,8 +72,8 @@ class Tab extends React.Component {
      * @return {[type]} [description]
      */
     render() {
-        var t = this;
-        var _className = classnames({
+        let t = this;
+        let _className = classnames({
             'tTab': true,
             [t.props.className]: !!t.props.className
         });
@@ -85,28 +88,36 @@ class Tab extends React.Component {
      * @return {[type]} [description]
      */
     _renderHead() {
-        var t = this;
-        let isScroll = t.props.scroll;
-        if (t.props.children.length < 5) {
-            isScroll = false;
+        let t = this;
+        if (t.props.scroll){
+             return  <Scroller className="tTabHead" scrollX={true} scrollY={false} ref="head">
+                {t._renderHeadContent(true,t)}
+                </Scroller>
+        }else{
+            return  <div className="tTabHead" ref="head">
+                {t._renderHeadContent(false,t)}
+                </div>
+           
         }
-        return <Scroller className="tTabHead" scrollX={true} scrollY={false} ref="head">
-        <div className={classnames({
-                    'tTabHeadScroll': isScroll,
-                    'tTabHeadContainer tCL tFBH':true,
-                })} ref="scroll">
-        {
-            React.Children.map(t.props.children, (child, index) => {
-                var _className = classnames({
-                    'tTabHeadItem tFL tFAC': true,
-                    'tFB1':!isScroll,
-                    'active': t.state.index == index
-                });
-                return <div className={_className} key={index} index={index}  onClick={t.handleChange.bind(t,index, child.props.data)} ><span>{child.props.title}</span></div>
-            })
-        }
-        </div>
-        </Scroller>
+    }
+
+    _renderHeadContent(scroll,t){
+        return <div className={classnames({
+                        'tTabHeadScroll': scroll,
+                        'tTabHeadContainer tCL tFBH':true,
+                    })} ref="scroll">
+                {
+                    React.Children.map(t.props.children, (child, index) => {
+                        let _className = classnames({
+                            'tTabHeadItem tFL tFAC': true,
+                            'tFB1':!scroll,
+                            'active': t.state.index == index
+                        });
+                        return <div className={_className} key={index} index={index}  onClick={t.handleChange.bind(t,index, child.props.data)} ><span>{child.props.title}</span></div>
+                    })
+                }
+                </div>
+
     }
 
     /**
@@ -114,11 +125,11 @@ class Tab extends React.Component {
      * @return {[type]} [description]
      */
     _renderBody() {
-        var t = this;
+        let t = this;
         return <div className="tTabBody">
         {
             React.Children.map(t.props.children, (child, index) => {
-                var _className = classnames({
+                let _className = classnames({
                     'tTabBodyItem': true,
                     'tHide': !(t.state.index == index)
                 });
@@ -137,8 +148,8 @@ class Tab extends React.Component {
  */
 Tab.defaultProps = {
     index: 0,
-    scroll:true,
-    onChange:function(){}
+    onChange:Context.noop,
+    scroll:false
 }
 
 // http://facebook.github.io/react/docs/reusable-components.html

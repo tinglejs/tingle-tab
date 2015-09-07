@@ -1,26 +1,30 @@
 {
   "name": "tingle-tab",
   "version": "0.0.1",
-  "description": "tingle-tab component for tingle.",
+  "description": "tingle-tab tab选项",
   "repository": "https://github.com/tinglejs/tingle-tab.git",
-  "author": "zhangshun",
+  "author": {
+    "name":"zhangshun",
+    "email":"kangning1206@163.com"
+  },
   "main": "src/index.js",
   "files": [
     "src",
     "README.md"
   ],
   "keywords": [
-    "tingle-tab,Tab",
-    ""
+    "tingle-tab",
+    "tab",
+    "选项",
+    "tingle"
   ],
   "dependencies": {
     "classnames": "^2.1.2",
     "fastclick": "^1.0.6",
     "react": "^0.13.3",
-    "tingle-context": "latest",
-    "tingle-scroller": "0.0.4",
-    "tingle-style": "latest",
-    "zepto": "0.0.4"
+    "tingle-scroller": "~0.0.4",
+    "tingle-context": "~0.1.0",
+    "tingle-style": "~0.0.1"
   },
   "devDependencies": {
     "babel-core": "^5.8.19",
@@ -32,5 +36,5 @@
     "start": "gulp server"
   },
   "license": "MIT",
-  "screenshots": ""
+  "screenshots": "https://gtms04.alicdn.com/tps/i4/TB1F8FTIVXXXXbMaFXX7bu.3pXX-433-175.png"
 }
