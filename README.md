@@ -1,4 +1,4 @@
-# Tab 多标签
+# Tab 多标签 [![npm version](https://badge.fury.io/js/tingle-tab.svg)](http://badge.fury.io/js/tingle-tab)
 
 ## TL;DR
 
@@ -8,7 +8,7 @@
 
 ## Simple Usage
 
-```
+```javascript
 <Tab index={2} onChange={t.handleChange.bind(t)}>
     <Tab.item title="头条" data={{"customKey1":"自定义值1","customKey2":"自定义值2"}}>
     <div className="tLH1_3 tP10">

@@ -30,7 +30,7 @@ class Tab extends React.Component {
      */
     componentDidMount() {
         // 计算宽度和滚动
-        var t = this;
+        let t = this;
         if (!t.props.scroll) {
             return;
         }
@@ -54,7 +54,7 @@ class Tab extends React.Component {
      * @return {[type]}       [description]
      */
     handleChange(index, data, e) {
-        var t = this;
+        let t = this;
         let preIndex = t.state.index;
         t.setState({
             index: index
@@ -72,7 +72,7 @@ class Tab extends React.Component {
      * @return {[type]} [description]
      */
     render() {
-        var t = this;
+        let t = this;
         let _className = classnames({
             'tTab': true,
             [t.props.className]: !!t.props.className
@@ -88,7 +88,7 @@ class Tab extends React.Component {
      * @return {[type]} [description]
      */
     _renderHead() {
-        var t = this;
+        let t = this;
         if (t.props.scroll){
              return  <Scroller className="tTabHead" scrollX={true} scrollY={false} ref="head">
                 {t._renderHeadContent(true,t)}
@@ -125,7 +125,7 @@ class Tab extends React.Component {
      * @return {[type]} [description]
      */
     _renderBody() {
-        var t = this;
+        let t = this;
         return <div className="tTabBody">
         {
             React.Children.map(t.props.children, (child, index) => {

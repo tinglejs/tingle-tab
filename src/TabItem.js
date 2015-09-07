@@ -25,4 +25,6 @@ TabItem.propTypes = {
     data: React.PropTypes.object
 }
 
+Tab.displayName = 'TabItem';
+
 module.exports = TabItem;
