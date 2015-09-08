@@ -115,7 +115,6 @@ class Tab extends React.Component {
             </div>
         );
     }
-
 }
 
 Tab.defaultProps = {
