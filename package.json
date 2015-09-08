@@ -1,12 +1,15 @@
 {
   "name": "tingle-tab",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "tingle-tab tab选项",
   "repository": "https://github.com/tinglejs/tingle-tab.git",
   "author": {
     "name": "zhangshun",
     "email": "kangning1206@163.com"
   },
+  "maintainers":[
+    "yize <yize.shc@gmail.com>"
+  ],
   "main": "src/index.js",
   "files": [
     "src",
