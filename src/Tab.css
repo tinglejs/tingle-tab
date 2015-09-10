@@ -34,7 +34,7 @@
 }
 .tTabHeadItem.active {
   color: #424242;
-  border-bottom: 5px solid #fb8c00;
+  border-bottom: 4px solid #fb8c00;
 }
 .hairline .tTabHead {
   border-top-width: 0.5px;

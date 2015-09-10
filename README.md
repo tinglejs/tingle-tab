@@ -1,10 +1,8 @@
-# Tab 多标签 [![npm version](https://badge.fury.io/js/tingle-tab.svg)](http://badge.fury.io/js/tingle-tab)
+# Tab [![npm version](https://badge.fury.io/js/tingle-tab.svg)](http://badge.fury.io/js/tingle-tab)
 
-## TL;DR
+标签切换控件
 
-这是一个 tingle 组件，接入是类似新闻网站，展示效果如下：  
-
-![效果图](https://gtms04.alicdn.com/tps/i4/TB1F8FTIVXXXXbMaFXX7bu.3pXX-433-175.png)
+<img src="https://img.alicdn.com/tps/TB1yoIXJpXXXXaEXXXXXXXXXXXX-750-1254.png" width="375"/>
 
 ## Simple Usage
 
