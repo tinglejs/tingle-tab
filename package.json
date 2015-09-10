@@ -1,13 +1,13 @@
 {
   "name": "tingle-tab",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "tingle-tab tab选项",
   "repository": "https://github.com/tinglejs/tingle-tab.git",
   "author": {
     "name": "zhangshun",
     "email": "kangning1206@163.com"
   },
-  "maintainers":[
+  "maintainers": [
     "yize <yize.shc@gmail.com>"
   ],
   "main": "src/index.js",
@@ -24,8 +24,7 @@
   "dependencies": {
     "classnames": "^2.1.2",
     "tingle-context": "~0.1.0",
-    "tingle-style": "~0.1.0",
-    "tingle-scroller": "~0.1.0"
+    "tingle-style": "~0.2.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.19",

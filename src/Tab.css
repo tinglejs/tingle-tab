@@ -12,7 +12,7 @@
   width: 100%;
   overflow: hidden;
   background-color: #fff;
-  height: 1.306666666666667rem;
+  height: 49px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -23,18 +23,18 @@
   height: 100%;
 }
 .tTabHeadItem {
-  padding: 0 0.333333333333333rem;
-  height: 1.306666666666667rem;
-  line-height: 1.306666666666667rem;
+  padding: 0 12px;
+  height: 49px;
+  line-height: 49px;
   overflow: hidden;
   cursor: pointer;
   color: #757575;
   white-space: nowrap;
-  font-size: 0.426666666666667rem;
+  font-size: 15px;
 }
 .tTabHeadItem.active {
   color: #424242;
-  border-bottom: 0.066666666666667rem solid #fb8c00;
+  border-bottom: 5px solid #fb8c00;
 }
 .hairline .tTabHead {
   border-top-width: 0.5px;
