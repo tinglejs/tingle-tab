@@ -1,4 +1,9 @@
 
+0.2.1 / 2015-11-16
+==================
+
+ * when receive props.index change , should reRender component
+
 0.2.0 / 2015-09-10
 ==================
 
