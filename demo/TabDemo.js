@@ -14,18 +14,31 @@ class Demo extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            index: 1
+        }
     }
 
     handleChange(obj) {
         let t = this;
     }
 
+    handleClick() {
+        this.setState({
+            index: 3
+        });
+    }
+
     render() {
         let t = this;
         return (
             <div>
-                <Tab scroll={true} index={2} onChange={t.handleChange.bind(t)}>
+
+                <button style={{
+                    'margin': '30px 50px'
+                }} onClick={t.handleClick.bind(t)}>让第3个tab高亮</button>
+
+                <Tab scroll={true} index={t.state.index} onChange={t.handleChange.bind(t)}>
                     <Tab.item title="头条" data={{"customKey1": "自定义值1", "customKey2": "自定义值2"}}>
                         <div className="tLH1_5 tP10">
                             与 Angular，Ember，Backbone 等等比起来 React 的表现如何？要如何处理数据？要如何连接服务器？JSX 到底是什么？“组件”又是如何定义的？
@@ -70,7 +83,7 @@ class Demo extends React.Component {
                 </Tab>
 
 
-                <Tab index={2}  onChange={t.handleChange.bind(t)}>
+                <Tab index={t.state.index}  onChange={t.handleChange.bind(t)}>
                     <Tab.item title="全部" data={{"customKey1": "自定义值1", "customKey2": "自定义值2"}}>
                         <div className="tLH1_5 tP10">
                             与 Angular，Ember，Backbone 等等比起来 React 的表现如何？要如何处理数据？要如何连接服务器？JSX 到底是什么？“组件”又是如何定义的？
