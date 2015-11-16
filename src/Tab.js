@@ -41,13 +41,12 @@ class Tab extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({
-            index: nextProps.index
-        });
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.state.index !== nextState.index;
+        let t = this;
+        if (nextProps.index !== t.state.index) {
+            t.setState({
+                index: nextProps.index
+            });
+        }
     }
 
     handleChange(index, data, e) {
