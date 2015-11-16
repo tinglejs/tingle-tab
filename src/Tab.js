@@ -38,6 +38,14 @@ class Tab extends React.Component {
         t.refs.head.scroller.refresh();
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.index !== this.props.index) {
+            this.setState({
+                index: nextProps.index
+            })
+        }
+    }
+
     handleChange(index, data, e) {
         let t = this;
         let preIndex = t.state.index;
@@ -81,20 +89,21 @@ class Tab extends React.Component {
     _renderHeadContent(scroll, t) {
         return <div className={classnames({
             'tTabHeadScroll': scroll,
-            'tTabHeadContainer tCL tFBH': true,
+            'tTabHeadContainer tCL tFBH': true
         })} ref="scroll">
-                {
-                    React.Children.map(t.props.children, (child, index) => {
-                        let _className = classnames({
-                            'tTabHeadItem tFL tFAC': true,
-                            'tFB1': !scroll,
-                            'active': t.state.index == index
-                        });
-                        return <div className={_className} key={index} index={index}  onClick={t.handleChange.bind(t, index, child.props.data)} >
-                            <span>{child.props.title}</span>
-                        </div>
-                    })
-                    }
+            {
+                React.Children.map(t.props.children, (child, index) => {
+                    let _className = classnames({
+                        'tTabHeadItem tFL tFAC': true,
+                        'tFB1': !scroll,
+                        'active': t.state.index == index
+                    });
+                    return <div className={_className} key={index} index={index}
+                                onClick={t.handleChange.bind(t, index, child.props.data)}>
+                        <span>{child.props.title}</span>
+                    </div>
+                })
+            }
         </div>
 
     }
@@ -103,15 +112,15 @@ class Tab extends React.Component {
         let t = this;
         return (
             <div className="tTabBody">
-        {
-            React.Children.map(t.props.children, (child, index) => {
-                let _className = classnames({
-                    'tTabBodyItem': true,
-                    'tHide': !(t.state.index == index)
-                });
-                return <div className={_className} key={index} index={index} >{child}</div>
-            })
-            }
+                {
+                    React.Children.map(t.props.children, (child, index) => {
+                        let _className = classnames({
+                            'tTabBodyItem': true,
+                            'tHide': !(t.state.index == index)
+                        });
+                        return <div className={_className} key={index} index={index}>{child}</div>
+                    })
+                }
             </div>
         );
     }
