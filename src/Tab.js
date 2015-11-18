@@ -2,6 +2,8 @@
  * Tab Component for tingle
  * @author zhangshun
  *
+ * Modified by quanyun.ma @ NOV. 16, 2015
+ *
  * Copyright 2014-2015, Tingle Team, Alinw.
  * All rights reserved.
  */
@@ -36,6 +38,15 @@ class Tab extends React.Component {
         scrollEl.style.width = w + "px";
         // 实例化滚动
         t.refs.head.scroller.refresh();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        let t = this;
+        if (nextProps.index !== t.state.index) {
+            t.setState({
+                index: nextProps.index
+            });
+        }
     }
 
     handleChange(index, data, e) {
