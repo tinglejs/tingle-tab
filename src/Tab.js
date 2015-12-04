@@ -92,12 +92,14 @@ class Tab extends React.Component {
     _renderHeadContent(scroll, t) {
         return <div className={classnames({
             'tTabHeadScroll': scroll,
-            'tTabHeadContainer tCL tFBH': true,
+            'tTabHeadContainer tCL': true,
+            'tFBH': !scroll
         })} ref="scroll">
                 {
                     React.Children.map(t.props.children, (child, index) => {
                         let _className = classnames({
-                            'tTabHeadItem tFL tFAC': true,
+                            'tTabHeadItem tFAC': true,
+                            'tFL': scroll,
                             'tFB1': !scroll,
                             'active': t.state.index == index
                         });
