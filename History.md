@@ -1,3 +1,7 @@
+0.2.2 / 2015-12.4
+==================
+bugfix on Android<4.4.0 [#7](https://github.com/tinglejs/tingle-tab/issues/7)
+
 
 0.2.1 / 2015-11-16
 ==================
