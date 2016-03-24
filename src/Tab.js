@@ -50,18 +50,20 @@ class Tab extends React.Component {
      * @param  {[type]} e     [description]
      * @return {[type]}       [description]
      */
-    handleChange(index, data, e) {
+    handleChange(index, data, props, e) {
         var t = this;
-        var preIndex = t.state.index;
-        t.setState({
-            index: index
-        });
-        t.props.onChange({
-            index: index,
-            preIndex: preIndex,
-            data: data,
-            e: e
-        });
+        if (!props.readOnly){
+            var preIndex = t.state.index;
+            t.setState({
+                index: index
+            });
+            t.props.onChange({
+                index: index,
+                preIndex: preIndex,
+                data: data,
+                e: e
+            });
+        }
     }
 
     /**
@@ -100,9 +102,10 @@ class Tab extends React.Component {
                 var _className = classnames({
                     'tTabHeadItem tFL tFAC': true,
                     'tFB1':!isScroll,
+                    'readOnly': child.props.readOnly,
                     'active': t.state.index == index
                 });
-                return <div className={_className} key={index} index={index}  onClick={t.handleChange.bind(t,index, child.props.data)} ><span>{child.props.title}</span></div>
+                return <div className={_className} key={index} index={index}  onClick={t.handleChange.bind(t,index, child.props.data,child.props)} ><span>{child.props.title}</span></div>
             })
         }
         </div>

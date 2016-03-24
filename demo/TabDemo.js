@@ -36,7 +36,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <Tab index={2} onChange={t.handleChange.bind(t)}>
-                    <Tab.item title="头条" data={{"customKey1":"自定义值1","customKey2":"自定义值2"}}>
+                    <Tab.item title="头条" readOnly={true} data={{"customKey1":"自定义值1","customKey2":"自定义值2"}}>
                     <div className="tLH1_5 tP10">
                          与 Angular，Ember，Backbone 等等比起来 React 的表现如何？要如何处理数据？要如何连接服务器？JSX 到底是什么？“组件”又是如何定义的？
                     </div>

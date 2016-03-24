@@ -16,12 +16,14 @@ class TabItem extends React.Component {
 
 TabItem.defaultProps = {
     title: "",
-    data:{}
+    readOnly: false,
+    data: {}
 }
 
 // http://facebook.github.io/react/docs/reusable-components.html
 TabItem.propTypes = {
     title: React.PropTypes.string,
+    readOnly: React.PropTypes.bool,
     data: React.PropTypes.object
 }
 
